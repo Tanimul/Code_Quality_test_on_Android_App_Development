@@ -11,10 +11,6 @@ class CodeQualityTestApp : Application() {
         appInstance = this
     }
 
-    override fun attachBaseContext(base: Context) {
-        super.attachBaseContext(base)
-    }
-
     companion object {
         private lateinit var appInstance: CodeQualityTestApp
 
