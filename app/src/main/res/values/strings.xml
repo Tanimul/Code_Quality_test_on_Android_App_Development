@@ -12,4 +12,5 @@
     <string name="have_an_account">Have an account?</string>
     <string name="sign_up">SIGN UP</string>
     <string name="registration">Registration</string>
+    <string name="hint">search ....</string>
 </resources>

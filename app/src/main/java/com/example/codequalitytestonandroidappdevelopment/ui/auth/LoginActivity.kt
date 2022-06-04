@@ -56,7 +56,7 @@ class LoginActivity : AppBaseActivity() {
                                 if (it.isSuccessful) {
                                     if (firebaseAuth.currentUser!!.isEmailVerified) {
                                         toast("login successfully")
-                                        launchActivity<MapActivity> { }
+                                        launchActivity<MapActivity> ()
                                     } else {
                                         toast("Please Verify your Email address")
                                     }

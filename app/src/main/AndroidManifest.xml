@@ -5,7 +5,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
+    <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <application
         android:name=".CodeQualityTestApp"
         android:allowBackup="true"
@@ -17,6 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeQualityTestOnAndroidAppDevelopment"
         tools:targetApi="31">
+
         <activity
             android:name=".ui.home.MapActivity"
             android:exported="false" />

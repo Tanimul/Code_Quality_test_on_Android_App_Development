@@ -6,8 +6,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
-import android.widget.ImageView
-import androidx.annotation.DrawableRes
 import com.example.codequalitytestonandroidappdevelopment.CodeQualityTestApp
 import com.example.codequalitytestonandroidappdevelopment.CodeQualityTestApp.Companion.getAppInstance
 import com.example.codequalitytestonandroidappdevelopment.CodeQualityTestApp.Companion.noInternetDialog
@@ -15,13 +13,6 @@ import com.example.codequalitytestonandroidappdevelopment.R
 import com.example.codequalitytestonandroidappdevelopment.databinding.LayoutNoInternetBinding
 import com.example.codequalitytestonandroidappdevelopment.utils.SharedPrefUtils
 inline fun <reified T : Any> newIntent(context: Context): Intent = Intent(context, T::class.java)
-
-inline fun <reified T : Any> Activity.launchActivityWithNewTask() {
-    launchActivity<T> {
-        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-    }
-}
 
 inline fun <reified T : Any> Activity.launchActivity(
     requestCode: Int = -1,
@@ -31,16 +22,6 @@ inline fun <reified T : Any> Activity.launchActivity(
     val intent = newIntent<T>(this)
     intent.init()
     startActivityForResult(intent, requestCode, options)
-}
-
-fun getSharedPrefInstance(): SharedPrefUtils {
-    return if (CodeQualityTestApp.sharedPrefUtils == null) {
-        CodeQualityTestApp.sharedPrefUtils = SharedPrefUtils()
-        CodeQualityTestApp.sharedPrefUtils!!
-    } else {
-        CodeQualityTestApp.sharedPrefUtils!!
-    }
-
 }
 
 enum class JsonFileCode {
