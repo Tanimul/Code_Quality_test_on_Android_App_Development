@@ -12,12 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <androidx.appcompat.widget.SearchView
+    <SearchView
         android:id="@+id/searchplace"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/bground"
         android:elevation="5dp"
+        android:queryHint="@string/hint"
         android:iconifiedByDefault="false" />
 </RelativeLayout>
